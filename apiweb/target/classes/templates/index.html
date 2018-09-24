@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="appCliente">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" type="text/javascript"></script>
+<script type="text/javascript"  src="./js/app.js"></script>
+</head>
+<body ng-controller="indexController">
+
+
+Oi{{ cliente.nome }} <br/>
+
+<input type = "text" ng-model="cliente.nome"/>
+<input ng-click="salvarCliente()" type= "button" value="Salvar"/>
+
+<div ng-repeat="cli in clientes">
+	{{cli.id + ' - ' + cli.nome }}
+	<input ng-click="excluirCliente(cli)" type= "button" value="Excluir"/>
+</div>
+
+</body>
+</html>
